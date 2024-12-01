@@ -50,3 +50,17 @@ class Test_day_01:
 
         result = day_01.calc_list_difference(list_a, list_b)
         assert result == 11
+
+    def test_parse2lists(self):
+        input = """
+3   4
+4   3
+2   5
+1   3
+3   9
+3   3"""
+        (actual_a, actual_b) = day_01.parse_text_2_lists(input)
+        list_a = [3, 4, 2, 1, 3, 3]
+        list_b = [4, 3, 5, 3, 9, 3]
+        assert actual_a == list_a
+        assert actual_b == list_b
