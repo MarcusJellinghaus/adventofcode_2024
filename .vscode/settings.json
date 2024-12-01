@@ -3,8 +3,12 @@
         "editor.formatOnSave": true,
         "editor.defaultFormatter": "charliermarsh.ruff",
         "editor.codeActionsOnSave": {
-            "source.organizeImports": "explicit"
-        }
+            "source.organizeImports": "always",
+            // "source.organizeImports.ruff": "always"
+        },
+        "isort.args": [
+            "--float-to-top"  // isort --profile black --float-to-top .
+        ],
     },
     "python.testing.pytestArgs": [
         "."
