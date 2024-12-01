@@ -1,4 +1,5 @@
 @echo off
+REM Create .vscode\extennsions.json based on the currently installed extensions in VsCode
 REM Create the .vscode folder if it doesn't exist
 if not exist .vscode mkdir .vscode
 
