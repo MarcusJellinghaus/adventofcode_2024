@@ -1,3 +1,5 @@
+import io
+
 import day_01
 import day_01b
 
@@ -12,7 +14,7 @@ class Test_day_01b:
 3   9
 3   3"""
 
-        list_a, list_b = day_01.parse_text_2_lists(data)
+        list_a, list_b = day_01.parse_text_2_lists(io.StringIO(data))
 
         # For these example lists, here is the process of finding the similarity score:
 

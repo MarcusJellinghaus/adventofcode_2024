@@ -1,3 +1,5 @@
+import io
+
 import day_01
 
 
@@ -59,7 +61,8 @@ class Test_day_01:
 1   3
 3   9
 3   3"""
-        (actual_a, actual_b) = day_01.parse_text_2_lists(data)
+        file_content = io.StringIO(data)
+        (actual_a, actual_b) = day_01.parse_text_2_lists(file_content)
         list_a = [3, 4, 2, 1, 3, 3]
         list_b = [4, 3, 5, 3, 9, 3]
         assert actual_a == list_a
