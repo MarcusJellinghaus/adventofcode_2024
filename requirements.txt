@@ -1,8 +1,1 @@
-# dev tools
-pytest
-mypy 
-ruff 
-uv
-
-# library tools
-polars
+polars==1.16.0
