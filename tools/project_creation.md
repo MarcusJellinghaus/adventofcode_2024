@@ -6,4 +6,4 @@
 - [ ] Create pyproject with `uv init`
 - [ ] Create VirtualEnvironment with `uv venv`
 - [ ] Choose virtual environment within VsCode
-- [ ] Install requirements with `uv pip install -r requirements.txt`
+- [ ] Install requirements with `uv pip install -r requirements.txt` and `uv pip install -r requirements_test.txt`
