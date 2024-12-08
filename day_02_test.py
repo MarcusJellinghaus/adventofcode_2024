@@ -10,7 +10,7 @@ class Test_Day_02:
         logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
     def test_read_data(self):
-        filename = os.path.join(os.getcwd(), r"day_02\testdata.txt")
+        filename = os.path.join(os.getcwd(), r"day_02", r"testdata.txt")
         data = day_02.read_data(filename=filename)
         assert len(data) == 6
         assert data[0] == [7, 6, 4, 2, 1]
@@ -35,7 +35,7 @@ class Test_Day_02:
         assert day_02.is_safe(day_02.get_differences([1, 3, 6, 7, 9])) is True
 
     def test_calc_safe_reports(self):
-        filename = os.path.join(os.getcwd(), r"day_02\testdata.txt")
+        filename = os.path.join(os.getcwd(), r"day_02", r"testdata.txt")
         assert day_02.calc_safe_reports(filename=filename) == 2    
 
     def test_is_safe_tolerate_1(self):
@@ -52,5 +52,5 @@ class Test_Day_02:
         assert day_02.is_safe_tolerate_1([1, 3, 6, 7, 9]) == (True, -1)
 
     def test_calc_safe_reports_tolerate_1(self):
-        filename = os.path.join(os.getcwd(), r"day_02\testdata.txt")
+        filename = os.path.join(os.getcwd(), r"day_02", r"testdata.txt")
         assert day_02.calc_safe_reports_tolerate_1(filename=filename) == 4
