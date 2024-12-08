@@ -1,3 +1,4 @@
+import logging
 import os
 
 
@@ -45,6 +46,34 @@ def calc_safe_reports(filename: str) -> int:
     result = 0
     for line in data:
         safe = is_safe(get_differences(line))
+        if safe:
+            result += 1
+    return result
+
+
+def is_safe_tolerate_1(values: list[int]) -> tuple[bool, int]:
+    differences = get_differences(values)
+    if is_safe(differences):
+        logging.debug(f"{values=} - safe without removing")
+        return True, -1
+
+    for i in reversed(range(0, len(values) - 1)):
+        values_minus_i = values.copy()
+        values_minus_i.pop(i)
+        differences = get_differences(values_minus_i)
+        if is_safe(differences):
+            logging.debug(f"{values=} - safe after removing pos {i}")
+            return True, i
+
+    logging.debug(f"{values=} - unsafe")
+    return False, -100
+
+
+def calc_safe_reports_tolerate_1(filename: str) -> int:
+    data = read_data(filename=filename)
+    result = 0
+    for line in data:
+        safe = is_safe_tolerate_1(line)[0]
         if safe:
             result += 1
     return result

@@ -1,8 +1,10 @@
-import os
+import os, logging
 
 import day_01
 import day_01b
 import day_02
+
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 
 def main():
@@ -22,6 +24,10 @@ def main():
     )
     print(f"Result day 02: {safe_reports=}")
 
+    safe_reports_tolerate_1 = day_02.calc_safe_reports_tolerate_1(
+        os.path.join(os.getcwd(), r"day_02\data.txt")
+    )
+    print(f"Result day 02b: {safe_reports_tolerate_1=}")  # not 398, which is too low
 
 if __name__ == "__main__":
     main()
