@@ -1,13 +1,14 @@
-import os, logging
+import logging
+import os
 
 import day_02
 
 
-
-
 class Test_Day_02:
     def setUpClass(self):
-        logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+        logging.basicConfig(
+            level=logging.DEBUG, format="%(asctime)s - %(levelname)s - %(message)s"
+        )
 
     def test_read_data(self):
         filename = os.path.join(os.getcwd(), r"day_02", r"testdata.txt")
@@ -36,10 +37,10 @@ class Test_Day_02:
 
     def test_calc_safe_reports(self):
         filename = os.path.join(os.getcwd(), r"day_02", r"testdata.txt")
-        assert day_02.calc_safe_reports(filename=filename) == 2    
+        assert day_02.calc_safe_reports(filename=filename) == 2
 
     def test_is_safe_tolerate_1(self):
-        assert day_02.is_safe_tolerate_1([7, 6, 4, 2, 1])  == (True, -1)
+        assert day_02.is_safe_tolerate_1([7, 6, 4, 2, 1]) == (True, -1)
         assert day_02.is_safe_tolerate_1([1, 2, 7, 8, 9]) == (False, -100)
         assert day_02.is_safe_tolerate_1([9, 7, 6, 2, 1]) == (False, -100)
 
