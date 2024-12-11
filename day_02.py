@@ -16,10 +16,10 @@ def read_data(filename: str) -> list[list[int]]:
     return result
 
 
-def get_differences(input: list[int]) -> list[int]:
+def get_differences(values: list[int]) -> list[int]:
     differences: list[int] = []
-    for i in range(1, len(input)):
-        difference = input[i] - input[i - 1]
+    for i in range(1, len(values)):
+        difference = values[i] - values[i - 1]
         differences.append(difference)
     return differences
 
