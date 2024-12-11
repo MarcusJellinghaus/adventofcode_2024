@@ -74,15 +74,19 @@ disable=R,
         # deprecated-sys-function,
         # exception-escape,
         # comprehension-escape,
-        # c-extension-no-member,                  # disabled by MJ, something like I1101(c-extension-no-member)
+        # c-extension-no-member,                # disabled by MJ, something like I1101(c-extension-no-member)
         logging-fstring-interpolation,          # to use fstrings in log messages
-        # protected-access,                       # W0212 - 41 cases on 2024-07-29, access to _functions
-        # fixme,                                  # W0511 - 33 cases on 2024-07-20, TODO comments
-        # broad-exception-caught,                 # W0718 - 21 cases on 2024-07-29, catching general Exception
-        # broad-exception-raised,                 # W0719 - 35 cases on 2024-07-29, Raising too general exception: Exception
-        unspecified-encoding                    # W1514 - 5 cases on 2024-07-29, Using open without explicitly specifying an encoding
+        # protected-access,                     # W0212 - 41 cases on 2024-07-29, access to _functions
+        # fixme,                                # W0511 - 33 cases on 2024-07-20, TODO comments
+        # broad-exception-caught,               # W0718 - 21 cases on 2024-07-29, catching general Exception
+        # broad-exception-raised,               # W0719 - 35 cases on 2024-07-29, Raising too general exception: Exception
+        unspecified-encoding,                   # W1514 - 5 cases on 2024-07-29, Using open without explicitly specifying an encoding
         # long-suffix,                          # pylint creates warning
         # old-ne-operator,                      # pylint creates warning
         # old-octal-literal,                    # pylint creates warning
         # non-ascii-bytes-literal,              # pylint creates warning
         # eq-without-hash,                      # pylint creates warning
+        missing-module-docstring.               # C0114
+        missing-function-docstring,             # C0116
+        unspecified-encoding,                   # W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
+        line-too-long                           # C0301: Line too long (122/100) (line-too-long)
